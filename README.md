@@ -12,7 +12,7 @@ Versions:
   - Elixir: `1.9.0`
   - NodeJS: `10.16.0`
 
-**Warining**: Do not use this image to deploy the app as the size is quite large at `~598MB`
+**Warning**: Do not use this image to deploy the app as the size is quite large at `~598MB`
 
 ## Usage
 
@@ -24,12 +24,12 @@ This file should be placed at the root of the Elixir/Phoenix project and:
 # Run the build script inside a container running this image
 # Note: On Windows replace $(pwd) with the actual path
 
-docker run -v $(pwd):/home --rm -it nalakajayasena/elixir-centos /home/build-release.sh
+docker run -v $(pwd):/home --rm -it akalan/elixir-centos /home/build-release.sh
 
 
 # Run the generated release inside the same container
 
-docker run -v $(pwd):/home --rm -it nalakajayasena/elixir-centos /home/_build/prod/rel/appname/bin/appname
+docker run -v $(pwd):/home --rm -it akalan/elixir-centos /home/_build/prod/rel/appname/bin/appname
 ```
 
 The release is tarred and zipped to `releases/appname-version-utc_time_stamp.tar.gz`
