@@ -52,6 +52,8 @@ echo "Building release - ok"
 echo "Compressing release ..."
 mkdir -p /home/releases/
 FILENAME="/home/releases/$APP_NAME-$APP_VSN-$(date '+%Y%m%dT%H%M%SZ').tar.gz"
+# Replace above line with below for timestamps in local timezone
+# FILENAME="/home/releases/$APP_NAME-$APP_VSN-$(TZ=Asia/Colombo date '+%Y%m%dT%H%M%S').tar.gz"
 cd "/home/_build/prod/rel/$APP_NAME/"
 tar -czf $FILENAME ./
 cd /home
